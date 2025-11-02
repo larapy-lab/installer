@@ -1,0 +1,2 @@
+[console_scripts]
+larapy = larapy_installer.cli:main

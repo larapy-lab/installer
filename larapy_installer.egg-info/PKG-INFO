@@ -1,0 +1,121 @@
+Metadata-Version: 2.4
+Name: larapy-installer
+Version: 0.1.0
+Summary: CLI installer for the Larapy framework
+Author-email: Larapy Team <team@larapy.dev>
+License: MIT
+Project-URL: Homepage, https://larapy.dev
+Project-URL: Documentation, https://docs.larapy.dev/installation
+Project-URL: Repository, https://github.com/larapy-lab/installer
+Project-URL: Issues, https://github.com/larapy-lab/installer/issues
+Keywords: larapy,installer,cli,framework
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Software Development :: Libraries :: Application Frameworks
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: typer[all]>=0.9.0
+Requires-Dist: rich>=13.6.0
+Requires-Dist: httpx>=0.25.0
+Requires-Dist: python-dotenv>=1.0.0
+Provides-Extra: dev
+Requires-Dist: pytest>=8.0.0; extra == "dev"
+Requires-Dist: pytest-cov>=4.1.0; extra == "dev"
+Requires-Dist: black>=24.0.0; extra == "dev"
+Requires-Dist: ruff>=0.1.0; extra == "dev"
+Dynamic: license-file
+
+# Larapy Installer
+
+CLI tool for creating new Larapy framework projects.
+
+## Installation
+
+```bash
+pip install larapy-installer
+```
+
+## Usage
+
+### Create New Project
+
+```bash
+larapy new my-project
+```
+
+### Use Specific Template
+
+```bash
+larapy new my-api --template=api
+larapy new my-app --template=full
+larapy new prototype --template=minimal
+```
+
+### With Options
+
+```bash
+larapy new my-project --git --force
+larapy new my-api --template=api --database=postgresql
+```
+
+### List Available Templates
+
+```bash
+larapy templates
+```
+
+### List Framework Versions
+
+```bash
+larapy versions
+```
+
+### Show Installer Version
+
+```bash
+larapy version
+```
+
+## Available Templates
+
+- **default**: Full-featured web application with authentication, database, and views
+- **api**: RESTful API application optimized for building backend services
+- **minimal**: Minimal setup with core features only, perfect for quick prototypes
+- **full**: Complete application with all features, admin panel, and frontend tools
+
+## Command Options
+
+### `larapy new <name>`
+
+Create a new Larapy project.
+
+Options:
+- `--template, -t`: Template to use (default: default)
+- `--python, -p`: Python version (default: 3.11)
+- `--database, -d`: Database type (default: sqlite)
+- `--git, -g`: Initialize git repository
+- `--force, -f`: Force overwrite existing directory
+
+## Development
+
+```bash
+git clone https://github.com/larapy-lab/installer
+cd installer
+pip install -e ".[dev]"
+```
+
+## Testing
+
+```bash
+pytest tests/
+```
+
+## License
+
+MIT License. See [LICENSE](LICENSE) for details.
