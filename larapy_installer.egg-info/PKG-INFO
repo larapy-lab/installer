@@ -1,9 +1,8 @@
-Metadata-Version: 2.4
-Name: larapy-installer
+Metadata-Version: 2.1
+Name: larapy_installer
 Version: 0.1.0
 Summary: CLI installer for the Larapy framework
 Author-email: Larapy Team <team@larapy.dev>
-License: MIT
 Project-URL: Homepage, https://larapy.dev
 Project-URL: Documentation, https://docs.larapy.dev/installation
 Project-URL: Repository, https://github.com/larapy-lab/installer
@@ -11,7 +10,6 @@ Project-URL: Issues, https://github.com/larapy-lab/installer/issues
 Keywords: larapy,installer,cli,framework
 Classifier: Development Status :: 4 - Beta
 Classifier: Intended Audience :: Developers
-Classifier: License :: OSI Approved :: MIT License
 Classifier: Programming Language :: Python :: 3
 Classifier: Programming Language :: Python :: 3.11
 Classifier: Programming Language :: Python :: 3.12
@@ -29,7 +27,6 @@ Requires-Dist: pytest>=8.0.0; extra == "dev"
 Requires-Dist: pytest-cov>=4.1.0; extra == "dev"
 Requires-Dist: black>=24.0.0; extra == "dev"
 Requires-Dist: ruff>=0.1.0; extra == "dev"
-Dynamic: license-file
 
 # Larapy Installer
 

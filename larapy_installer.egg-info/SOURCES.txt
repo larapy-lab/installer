@@ -9,3 +9,10 @@ larapy_installer.egg-info/dependency_links.txt
 larapy_installer.egg-info/entry_points.txt
 larapy_installer.egg-info/requires.txt
 larapy_installer.egg-info/top_level.txt
+larapy_installer/commands/__init__.py
+larapy_installer/commands/new.py
+larapy_installer/commands/templates.py
+larapy_installer/commands/versions.py
+larapy_installer/utils/__init__.py
+larapy_installer/utils/git.py
+larapy_installer/utils/validation.py

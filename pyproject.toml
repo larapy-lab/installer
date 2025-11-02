@@ -3,12 +3,11 @@ requires = ["setuptools>=68.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "larapy-installer"
+name = "larapy_installer"
 version = "0.1.0"
 description = "CLI installer for the Larapy framework"
 readme = "README.md"
 requires-python = ">=3.11"
-license = {text = "MIT"}
 authors = [
     {name = "Larapy Team", email = "team@larapy.dev"}
 ]
@@ -16,7 +15,6 @@ keywords = ["larapy", "installer", "cli", "framework"]
 classifiers = [
     "Development Status :: 4 - Beta",
     "Intended Audience :: Developers",
-    "License :: OSI Approved :: MIT License",
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
@@ -48,8 +46,8 @@ Documentation = "https://docs.larapy.dev/installation"
 Repository = "https://github.com/larapy-lab/installer"
 Issues = "https://github.com/larapy-lab/installer/issues"
 
-[tool.setuptools]
-packages = ["larapy_installer"]
+[tool.setuptools.packages.find]
+include = ["larapy_installer*"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
